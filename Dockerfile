@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY Custom-Application-0.0.1-SNAPSHOT.jar app.jar
+COPY target/Custom-Application-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application's port
 EXPOSE 8099

@@ -66,7 +66,7 @@ public class AdminController {
 		return ResponseEntity.ok(employee);
 	}
 	
-	@PostMapping("/updateEmployee")
+	@PutMapping("/updateEmployee")
 	public ResponseEntity<?> updateEmployee(@RequestBody Employee employee){
 		employeeRepository.save(employee);
 		return ResponseEntity.ok(employee);

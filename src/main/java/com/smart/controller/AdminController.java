@@ -71,6 +71,13 @@ public class AdminController {
 		employeeRepository.save(employee);
 		return ResponseEntity.ok(employee);
 	}
+
+	@DeleteMapping("/getParticularEmployeeIdToDelete/{employeeId}")
+	public ResponseEntity<?> getParticularEmployeeIdToDelete(@PathVariable("employeeId") int employeeId){
+		
+		employeeRepository.deleteById(employeeId);
+		return ResponseEntity.ok("Employee Delete Succefully");
+	}
 	
 	
 	@PostMapping("/addStudent")
